@@ -3,4 +3,7 @@ $body-color: slateblue;
 body {
   color: $body-color;
   font-family: sans-serif;
+  padding-top: 4.5rem;
 }
+
+@import "~bootstrap/scss/bootstrap";
