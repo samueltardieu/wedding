@@ -1,0 +1,1 @@
+{"version":3,"file":"js/app.d5dfecdb.js","mappings":"yBAMAA,QAAQC,IAAI,sB","sources":["webpack://webpack-starter/./src/scripts/index.js"],"sourcesContent":["import '../styles/index.scss';\n\nif (process.env.NODE_ENV === 'development') {\n  require('../index.html');\n}\n\nconsole.log('webpack starterkit');\n"],"names":["console","log"],"sourceRoot":""}
