@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="200"
+   viewBox="0 0 211.66666 52.916668"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.52941176"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="2.6832492"
+     inkscape:cx="363.73812"
+     inkscape:cy="207.58415"
+     inkscape:window-width="3840"
+     inkscape:window-height="2066"
+     inkscape:window-x="2989"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35.2778px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="18.932262"
+       y="41.414341"
+       id="text781"><tspan
+         sodipodi:role="line"
+         id="tspan779"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;font-family:'Vladimir Script';-inkscape-font-specification:'Vladimir Script';fill:#7584ae;fill-opacity:1;stroke-width:0.264583"
+         x="18.932262"
+         y="41.414341">Émeline   Ali</tspan></text>
+    <path
+       style="fill:#e73632;stroke:#e73632;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 123.75,15.086653 7.78984,-7.9870515 16.26992,11.8326695 -14.88944,24.454183 -31.751,-25.045817 11.53686,-11.5368523 z"
+       id="path17354" />
+  </g>
+</svg>
