@@ -1,9 +1,35 @@
+$primary: #e3dbe4;
+$danger: #E73632;
+$success: #7988B4;
+$warning: #EEE2E5;
+$info: #98a3c5;
+
+$body-bg: #24282A;
 $body-color: slateblue;
 
+$gold: #e8ca6f;
+
 body {
-  color: $body-color;
   font-family: sans-serif;
-  padding-top: 4.5rem;
+}
+
+#hero {
+  background: url('../assets/top-bg.jpeg') center center;
+  background-size: cover;
+  min-height: 700px;
+}
+
+#RSVP {
+  border-color: $gold;
+  color: darken($gold, 3%);
+  background-color: transparent;
+  margin-top: 20em;
+  border-radius: 40px;
+}
+
+#RSVP:hover {
+  color: darken($gold, 50%);
+  background-color: $gold;
 }
 
 @import "~bootstrap/scss/bootstrap";
