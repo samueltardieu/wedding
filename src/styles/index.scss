@@ -19,6 +19,10 @@ body {
   min-height: 700px;
 }
 
+#hero img{
+  max-width: 100%;
+}
+
 #RSVP {
   border-color: $gold;
   color: darken($gold, 3%);
