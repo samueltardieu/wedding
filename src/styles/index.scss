@@ -1,11 +1,11 @@
 $primary: #e3dbe4;
-$danger: #E73632;
-$success: #7988B4;
-$warning: #EEE2E5;
+$danger: #e73632;
+$success: #7988b4;
+$warning: #eee2e5;
 $info: #98a3c5;
 
-$body-bg: #24282A;
-$body-color: slateblue;
+$body-bg: #24282a;
+$body-color: #7988b4;
 
 $gold: #e8ca6f;
 
@@ -13,13 +13,21 @@ body {
   font-family: sans-serif;
 }
 
+.section-padding {
+  padding: 40px 0;
+}
+
+.section-border {
+  border-bottom: 1px solid #e6e9ea;
+}
+
 #hero {
-  background: url('../assets/top-bg.jpeg') center center;
+  background: url("../assets/top-bg.jpeg") center center;
   background-size: cover;
   min-height: 700px;
 }
 
-#hero img{
+#hero img {
   max-width: 100%;
 }
 
@@ -34,6 +42,28 @@ body {
 #RSVP:hover {
   color: darken($gold, 50%);
   background-color: $gold;
+}
+
+#video-bg {
+  height: 300px;
+}
+
+#video-content {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  position: relative;
+  background: rgba(17, 17, 17, 0.5);
+  text-align: center;
+}
+#video-content h5 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+#video-content p {
+  color: #ffffff;
 }
 
 @import "~bootstrap/scss/bootstrap";
