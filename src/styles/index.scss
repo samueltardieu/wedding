@@ -5,12 +5,40 @@ $warning: #eee2e5;
 $info: #98a3c5;
 
 $body-bg: #24282a;
-$body-color: #7988b4;
+$body-color: #e3dbe4;
 
 $gold: #e8ca6f;
 
 body {
   font-family: sans-serif;
+}
+
+p {
+  font-size: 15px;
+  line-height: 29px;
+  padding-bottom: 20px;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 29px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .section-padding {
@@ -64,6 +92,11 @@ body {
 }
 #video-content p {
   color: #ffffff;
+}
+
+#map-canvas {
+  height: 500px;
+  width: 100%;
 }
 
 @import "~bootstrap/scss/bootstrap";
