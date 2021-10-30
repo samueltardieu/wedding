@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter",
-  "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "name": "wedding",
+  "version": "0.7.0",
+  "description": "A light wedding website.",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wbkd/webpack-starter.git"
+    "url": "git+https://github.com/rouzbeh/wedding.git"
   },
   "keywords": [
     "webpack",
@@ -21,10 +21,10 @@
     "javascript",
     "webdev"
   ],
-  "author": "webkid.io",
+  "author": "Rouzbeh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wbkd/webpack-starter/issues"
+    "url": "https://github.com/rouzbeh/wedding/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -67,7 +67,10 @@
     "bootstrap": "^5.1.0",
     "core-js": "^3.16.2",
     "d3": "^7.0.1",
+    "i18next": "^21.3.3",
+    "i18next-browser-languagedetector": "^6.1.2",
     "jquery": "^3.6.0",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "yarn": "^1.22.17"
   }
 }

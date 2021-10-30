@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ali & Émeline</title>
+  <title id="pageTitle"></title>
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAD29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2AhuY+f8fl/r/HJn5/x6Y+f/29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCH5f6/x+X+f/29vYC9vb2Avb29gL29vYCHZr2/x+X+//29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCJ5vt/x2Z+P/29vYC9vb2Avb29gL29vYC9vb2Avb29gIfl/r/Gpf5//b29gL29vYC9vb2Avb29gL29vYCK77v/yCW+/8bmfj/Jpvy//b29gL29vYC9vb2Avb29gL29vYC9vb2Ah2Y+v/29vYC9vb2Avb29gJpxuv/Hb/z/27u//8hl/v/9vb2Ah+a+P8bmff/v+////b29gL29vYC9vb2Avb29gIbmfj/9vb2Avb29gL29vYCIL31//b29gL29vYCHZj5//b29gL29vYC9vb2Ah+Y+P/29vYC9vb2Avb29gL29vYCHpj7/8Xu9v/29vYCIr31//b29gL29vYC9vb2Ah2Y+P/29vYC9vb2Avb29gL29vYCHZj4//b29gL29vYC9vb2Ah6Y+f/29vYC9vb2AiG/8v/29vYC9vb2Avb29gIdmff/9vb2Avb29gL29vYC9vb2Ah+Z9//29vYC9vb2Avb29gIcmfj/9vb2Atb4/f8kvfX/9vb2Avb29gL29vYCjOf8/x2Y+v/29vYC9vb2Avb29gIdmfr/9vb2Avb29gIcmvf/ePD8//b29gL29vYCI77z//b29gL29vYC9vb2Avb29gJm5P//G5n3/zmb5P/29vYCH5j4/0Gc4P8dmPr/duz9//b29gL29vYC9vb2AiO89v/29vYC9vb2Avb29gL29vYC9vb2Avb29gJX0Pv/H5n3/x2a+P907P//9vb2Avb29gL29vYC9vb2Avb29gJz7f//Ib32//b29gL29vYC9vb2Avb29gL29vYC9vb2Ah6X+/8cmfj/9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2AiW67v8fvvX/9vb2Avb29gL29vYC9vb2AhuZ+f8dmfj/9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCge/7/x+/9P8jvfb/GJn6/x+Y+P81m/H/9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCDyKq/w8hrf/29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYCg6bt/0Fp8P8/ZvT/FCKt//b29gL29vYC9vb2Avb29gL29vYC9vb2Avb29gL29vYC/w8AAPzzAAD5+QAA8P0AAMI9AADbvAAAu90AALvdAAA52QAAvEMAAL8PAACfnwAAzz8AAOB/AAD5/wAA8P8AAA==" rel="icon" type="image/x-icon" />
 </head>
 
-<body>
+<body id="body">
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-light">
     <div class="container-fluid">
@@ -21,10 +22,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#map">Venue</a>
+            <a class="nav-link" href="?lng=en">🇬🇧</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#rsvp">RSVP</a>
+            <a class="nav-link" href="?lng=fr">🇫🇷</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?lng=fa">🇮🇷</a>
           </li>
         </ul>
       </div>
@@ -47,10 +51,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h3>We are getting hitched</h3>
-          <p>The dates are 18<sup>th</sup> &amp; 19<sup>th</sup> of July 2022 and we would like you to be a part
-            of
-            it.</p>
+          <h3 id="hitched"></h3>
+          <p id="dates"></p>
         </div>
       </div>
     </div>
@@ -61,15 +63,15 @@
       data-property="{videoURL:'https://youtu.be/spb-qv3kLMQ',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
     </div>
     <div id="video-content">
-      <h5>Manoir de la Fresnay</h5>
-      <p>Réminiac</p>
+      <h5 id=manorName></h5>
+      <p id="manorCity"></p>
     </div>
   </div>
 
   <section id="map" class="section-padding">
     <div class="text-center">
-      <h3>How do I get there?</h3>
-      <p>It's way easier than you think!</p>
+      <h3 id="getThere"></h3>
+      <p id="easier"></p>
     </div>
     <div id="map-canvas"></div>
   </section>
@@ -80,8 +82,8 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="section-padding">
-              <h3>Thank you!</h3>
-              <p>We are glad to see you join us on our big day.</p>
+              <h3 id="thanks"></h3>
+              <p id="glad"></p>
               <div id="add-to-cal"></div>
             </div>
           </div>
@@ -89,22 +91,21 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div class="container">
+    <div class="container" dir="ltr">
       <div class="row justify-content-center">
         <div class="col-sm-9">
-          <h3>What are you waiting for?</h3>
-          <p>We would greatly appreciate if you could RSVP before 1st of June 2022</p>
+          <h3 id="waiting"></h3>
+          <p id="appreciate"></p>
           <form id="rsvp-form" class="rsvp-form" action="" method="POST">
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <div class="form-input-group">
-                  <i class="fa fa-envelope"></i><input type="email" name="email" class="" placeholder="Your email"
-                    required="">
+                  <i class="fa fa-envelope"></i><input type="email" id="yourEmail" name="email" class="" required="">
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-input-group">
-                  <i class="fa fa-user"></i><input name="name" class="" placeholder="Your name" required="">
+                  <i class="fa fa-user"></i><input name="name" id="yourName" class="" required="">
                 </div>
               </div>
             </div>
@@ -112,22 +113,19 @@
               <div class="col-md-6 col-sm-6">
                 <div class="form-input-group">
                   <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0" max="4"
-                    placeholder="Husband/Wife or kids" required="">
+                    id="plusOne" required="">
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-input-group">
-                  <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code" class="" min="0"
-                    placeholder="Invite code" required="">
+                  <i class="fa fa-key"></i><input type="number" name="invite_code" id="inviteCode" class="" min="0" required="">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12" id="alert-wrapper"></div>
             </div>
-            <button class="btn-fill rsvp-btn">
-              Yes,
-              that's me!
+            <button class="btn-fill rsvp-btn" id="itsMe">
             </button>
           </form>
         </div>
