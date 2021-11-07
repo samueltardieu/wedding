@@ -60,7 +60,6 @@ $(document).ready(function () {
           "plusOne": "Husband/Wife or kids",
           "inviteCode": "Invite code",
           "itsMe": "Yes, that's me!",
-          "dir": "ltr"
         }
       },
       fr: {
@@ -81,11 +80,11 @@ $(document).ready(function () {
           "plusOne": "Moitié/enfants",
           "inviteCode": "Code d'invitation",
           "itsMe": "Oui, c'est moi!",
-          "dir": "ltr"
         }
       },
       fa: {
         translation: {
+          "logo": "public/logo-fa.svg",
           "pageTitle": "امیرحسن &#x1F492 املین",
           "hitched": "عروسی می‌کنیم!",
           "dates": "۲۸ تیر ۱۴۰۱ در فرانسه جشنی می‌گیریم، و از دیدنتان خوشحال می‌شویم",
@@ -102,12 +101,13 @@ $(document).ready(function () {
           "plusOne": "همسر/فرزند",
           "inviteCode": "رمز",
           "itsMe": "می آییم",
-          "dir": "rtl"
+          "dir": "rtl",
         }
       }
     }
   }).then(function (t) {
     document.getElementById('pageTitle').innerHTML = i18next.t('pageTitle');
+    document.getElementById('logo').src = i18next.t('logo', 'public/logo.svg')
     document.getElementById('hitched').innerHTML = i18next.t('hitched');
     document.getElementById('dates').innerHTML = i18next.t('dates');
     document.getElementById('getThere').innerHTML = i18next.t('getThere');
@@ -123,7 +123,7 @@ $(document).ready(function () {
     document.getElementById('plusOne').placeholder = i18next.t('plusOne');
     document.getElementById('inviteCode').placeholder = i18next.t('inviteCode');
     document.getElementById('itsMe').innerHTML = i18next.t('itsMe');
-    document.getElementById('body').dir = i18next.t('dir');
+    document.getElementById('body').dir = i18next.t('dir', 'ltr');
   });
 
   // Video background
