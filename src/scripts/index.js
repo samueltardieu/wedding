@@ -1,5 +1,4 @@
 import '../styles/index.scss';
-import "jquery.mb.ytplayer";
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Modal, bootstrap } from 'bootstrap';
@@ -12,7 +11,7 @@ import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 // Internationalisation
 import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-
+import 'youtube-background';
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
@@ -37,7 +36,6 @@ function buf2hex(buffer) { // buffer is an ArrayBuffer
 }
 
 $(document).ready(function () {
-
   i18next.use(LanguageDetector).init({
     debug: true,
     fallbackLng: 'en',
@@ -126,8 +124,8 @@ $(document).ready(function () {
     document.getElementById('body').dir = i18next.t('dir', 'ltr');
   });
 
-  // Video background
-  $('.player').YTPlayer();
+  // Video
+  jQuery('[data-youtube]').youtube_background();
 
   // Map
   var map = L.map('map-canvas', {
