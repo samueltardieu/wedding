@@ -71,6 +71,6 @@
     "jquery": "^3.6.0",
     "regenerator-runtime": "^0.13.9",
     "yarn": "^1.22.17",
-    "youtube-background": "^1.0.10"
+    "youtube-background": "^1.0.11"
   }
 }
