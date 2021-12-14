@@ -64,7 +64,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.0",
     "bootstrap": "^5.1.0",
-    "core-js": "^3.19.2",
+    "core-js": "^3.19.3",
     "d3": "^7.2.1",
     "i18next": "^21.6.0",
     "i18next-browser-languagedetector": "^6.1.2",
