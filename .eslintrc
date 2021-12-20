@@ -1,11 +1,14 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended"
   ],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true
   },
   "parserOptions": {
     "ecmaVersion": 6,

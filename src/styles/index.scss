@@ -1,3 +1,5 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
 $primary: #e3dbe4;
 $danger: #e73632;
 $success: #7988b4;
@@ -15,7 +17,7 @@ $keyline-color: #e6e9ea;
 $gold: #e8ca6f;
 
 body {
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue";
 }
 
 p {
@@ -23,13 +25,16 @@ p {
   line-height: 29px;
   padding-bottom: 20px;
 }
+
 h1 {
   font-size: 60px;
 }
+
 h2 {
   font-size: 40px;
   font-weight: 300;
 }
+
 h3 {
   font-size: 18px;
   font-weight: 700;
@@ -37,9 +42,11 @@ h3 {
   letter-spacing: 3px;
   line-height: 29px;
 }
+
 h4 {
   font-size: 18px;
 }
+
 h5 {
   font-size: 15px;
   text-transform: uppercase;
@@ -47,59 +54,61 @@ h5 {
 }
 
 .btn {
-  font-size:13px;
-  border:solid 2px;
-  -moz-border-radius:40px;
-  -webkit-border-radius:40px;
-  border-radius:40px;
-  display:inline-block;
-  text-transform:uppercase
- }
- .btn:hover,
- .btn:focus {
-  color:#fff;
-  border-color:#e8ca6f;
-  background-color:#e8ca6f
- }
- .btn-white {
-  font-size:13px;
-  border:solid 2px;
-  -moz-border-radius:40px;
-  -webkit-border-radius:40px;
-  border-radius:40px;
-  display:inline-block;
-  border-color:#fff
- }
- .btn-white:hover,
- .btn-white:focus {
-  color:#e8ca6f;
-  border-color:#e8ca6f
- }
- .btn-fill {
-  color:#fff;
-  border:solid 2px #e8ca6f;
-  -moz-border-radius:40px;
-  -webkit-border-radius:40px;
-  border-radius:40px;
-  display:inline-block;
-  text-transform:uppercase;
-  background-color:#e8ca6f
- }
- .btn-fill:hover,
- .btn-fill:focus {
-  color:#fff;
-  background-color:#d3b56a;
-  border-color:#d3b56a
- }
- .btn-small {
-  padding:8px 30px
- }
- .btn-large {
-  padding:15px 40px
- }
- .btn-margin-right {
-  margin-right:20px
- }
+  font-size: 13px;
+  border: solid 2px;
+  border-radius: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  border-color: #e8ca6f;
+  background-color: #e8ca6f;
+}
+
+.btn-white {
+  font-size: 13px;
+  border: solid 2px;
+  border-radius: 40px;
+  display: inline-block;
+  border-color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+  color: #e8ca6f;
+  border-color: #e8ca6f;
+}
+
+.btn-fill {
+  color: #fff;
+  border: solid 2px #e8ca6f;
+  border-radius: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #e8ca6f;
+}
+
+.btn-fill:hover,
+.btn-fill:focus {
+  color: #fff;
+  background-color: #d3b56a;
+  border-color: #d3b56a;
+}
+
+.btn-small {
+  padding: 8px 30px;
+}
+
+.btn-large {
+  padding: 15px 40px;
+}
+
+.btn-margin-right {
+  margin-right: 20px;
+}
 
 .section-padding {
   padding: 40px 0;
@@ -119,7 +128,7 @@ h5 {
   max-width: 100%;
 }
 
-#RSVP {
+#rsvp-button {
   border-color: $gold;
   color: darken($gold, 3%);
   background-color: transparent;
@@ -127,7 +136,7 @@ h5 {
   border-radius: 40px;
 }
 
-#RSVP:hover {
+#rsvp-button:hover {
   color: darken($gold, 50%);
   background-color: $gold;
 }
@@ -141,19 +150,19 @@ h5 {
   height: 100%;
   padding-top: 100px;
   position: relative;
-  background: rgba(17, 17, 17, 0.5);
+  background: rgb(17 17 17 / 50%);
   text-align: center;
 }
 
 #video-content h5 {
-  color: #ffffff;
+  color: #fff;
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 10px;
 }
 
 #video-content p {
-  color: #ffffff;
+  color: #fff;
 }
 
 #map-canvas {
@@ -167,22 +176,23 @@ h5 {
   width: 100%;
   font-size: 13px;
 }
+
 .rsvp .rsvp-form .form-input-group {
   width: 100%;
   height: 55px;
   margin: 0 auto 10px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   border: solid 1px #e6e9ea;
   text-align: left;
   position: relative;
 }
+
 .rsvp .rsvp-form .form-input-group i {
   color: #e8ca6f;
   font-size: 14px;
 }
-.rsvp .rsvp-form .form-input-group i:after {
+
+.rsvp .rsvp-form .form-input-group i::after {
   content: "";
   height: 30px;
   width: 1px;
@@ -192,6 +202,7 @@ h5 {
   left: 30px;
   transform: translateY(-50%);
 }
+
 .rsvp .rsvp-form .form-input-group i.fa-user,
 .rsvp .rsvp-form .form-input-group i.fa-users,
 .rsvp .rsvp-form .form-input-group i.fa-envelope,
@@ -202,31 +213,18 @@ h5 {
   transform: translateY(-50%);
   margin-left: 20px;
 }
+
 .rsvp .rsvp-form .form-input-group input {
   padding-left: 68px;
   width: 100%;
   height: 100%;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
   border-radius: 6px;
   border: none;
-}
-.rsvp .rsvp-form .form-input-group input::-webkit-input-placeholder {
-  color: #bcc1c3;
-}
-.rsvp .rsvp-form .form-input-group input:-moz-placeholder {
-  color: #bcc1c3;
-}
-.rsvp .rsvp-form .form-input-group input::-moz-placeholder {
-  color: #bcc1c3;
-}
-.rsvp .rsvp-form .form-input-group input:-ms-input-placeholder {
   color: #bcc1c3;
 }
 
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import "~bootstrap/scss/bootstrap";
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/solid';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";

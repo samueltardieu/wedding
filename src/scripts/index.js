@@ -1,7 +1,7 @@
 import '../styles/index.scss';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { Modal, bootstrap } from 'bootstrap';
+import { Modal } from 'bootstrap';
 
 // stupid hack so that leaflet's images work after going through webpack
 import marker from 'leaflet/dist/images/marker-icon.png';
@@ -55,9 +55,11 @@ $(document).ready(function () {
           "appreciate": "We would greatly appreciate if you could RSVP before 1st of June 2022",
           "yourName": "Your name",
           "yourEmail": "Your email",
-          "plusOne": "Husband/Wife or kids",
+          "notes": "Comments",
           "inviteCode": "Invite code",
           "itsMe": "Yes, that's me!",
+          "saving": "<strong>Just a sec!</strong> We are saving your details.",
+          "wrongCode": "<strong>Sorry!</strong> Your invite code is incorrect."
         }
       },
       fr: {
@@ -75,9 +77,11 @@ $(document).ready(function () {
           "appreciate": "Nous vous remercions de bien vouloir nous faire parvenir votre réponse avant le premier Juin 2022",
           "yourName": "Votre nom",
           "yourEmail": "Votre courriel",
-          "plusOne": "Moitié/enfants",
+          "notes": "Commentaires",
           "inviteCode": "Code d'invitation",
           "itsMe": "Oui, c'est moi!",
+          "saving": "<strong>Une petite second!</strong> On note.",
+          "wrongCode": "<strong>Désolé!</strong> Le code est incorrecte."
         }
       },
       fa: {
@@ -96,32 +100,34 @@ $(document).ready(function () {
           "appreciate": "لطفا جواب دعوتنامه را تا اول خرداد ۱۴۰۱ به ما برسانید",
           "yourName": "نام",
           "yourEmail": "ایمیل",
-          "plusOne": "همسر/فرزند",
+          "notes": "یاد داشت",
           "inviteCode": "رمز",
           "itsMe": "می آییم",
           "dir": "rtl",
+          "saving": "<strong>یک لحظه</strong> یاد داشت می‌کنیم.",
+          "wrongCode": "<strong>Sorry!</strong> Wrong code."
         }
       }
     }
   }).then(function (t) {
-    document.getElementById('pageTitle').innerHTML = i18next.t('pageTitle');
-    document.getElementById('logo').src = i18next.t('logo', 'public/logo.svg')
-    document.getElementById('hitched').innerHTML = i18next.t('hitched');
-    document.getElementById('dates').innerHTML = i18next.t('dates');
-    document.getElementById('getThere').innerHTML = i18next.t('getThere');
-    document.getElementById('easier').innerHTML = i18next.t('easier');
-    document.getElementById('manorName').innerHTML = i18next.t('manorName');
-    document.getElementById('manorCity').innerHTML = i18next.t('manorCity');
-    document.getElementById('thanks').innerHTML = i18next.t('thanks');
-    document.getElementById('glad').innerHTML = i18next.t('glad');
-    document.getElementById('waiting').innerHTML = i18next.t('waiting');
-    document.getElementById('appreciate').innerHTML = i18next.t('appreciate');
-    document.getElementById('yourName').placeholder = i18next.t('yourName');
-    document.getElementById('yourEmail').placeholder = i18next.t('yourEmail');
-    document.getElementById('plusOne').placeholder = i18next.t('plusOne');
-    document.getElementById('inviteCode').placeholder = i18next.t('inviteCode');
-    document.getElementById('itsMe').innerHTML = i18next.t('itsMe');
-    document.getElementById('body').dir = i18next.t('dir', 'ltr');
+    document.getElementById('pageTitle').innerHTML = t('pageTitle');
+    document.getElementById('logo').src = t('logo', 'public/logo.svg');
+    document.getElementById('hitched').innerHTML = t('hitched');
+    document.getElementById('dates').innerHTML = t('dates');
+    document.getElementById('getThere').innerHTML = t('getThere');
+    document.getElementById('easier').innerHTML = t('easier');
+    document.getElementById('manorName').innerHTML = t('manorName');
+    document.getElementById('manorCity').innerHTML = t('manorCity');
+    document.getElementById('thanks').innerHTML = t('thanks');
+    document.getElementById('glad').innerHTML = t('glad');
+    document.getElementById('waiting').innerHTML = t('waiting');
+    document.getElementById('appreciate').innerHTML = t('appreciate');
+    document.getElementById('yourName').placeholder = t('yourName');
+    document.getElementById('yourEmail').placeholder = t('yourEmail');
+    document.getElementById('notes').placeholder = t('notes');
+    document.getElementById('inviteCode').placeholder = t('inviteCode');
+    document.getElementById('itsMe').innerHTML = t('itsMe');
+    document.getElementById('body').dir = t('dir', 'ltr');
   });
 
   // Video
@@ -151,14 +157,13 @@ $(document).ready(function () {
     e.preventDefault();
     var data = $(this).serialize();
     $('#alert-wrapper').html(alert_markup('info',
-      '<strong>Just a sec!</strong> We are saving your details.'));
+      i18next.t('saving')));
 
-    const buf = new TextEncoder('utf-8').encode($('#invite_code').val());
+    const buf = new TextEncoder('utf-8').encode(document.getElementById('inviteCode').value);
     const hash_buffer = await window.crypto.subtle.digest('SHA-256', buf);
     const hash = buf2hex(hash_buffer);
     if (hash !== '810e0513f2170990ddc1693d677b0fcc77b61456093b51d69e6a0209606404bc') {
-      $('#alert-wrapper').html(alert_markup('danger',
-        '<strong>Sorry!</strong> Your invite code is incorrect.'));
+      $('#alert-wrapper').html(alert_markup('danger', i18next.t('wrongCode')));
     } else {
       $.post('https://script.google.com/macros/s/AKfycbzFouecG2X4STE4PTd1U5G1ah814GDOD7_scFaoCH2TekAQi83Hi3M26YOXg5GjM__w3Q/exec', data)
         .done(function (data) {
