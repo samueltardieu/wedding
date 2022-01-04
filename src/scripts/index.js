@@ -14,6 +14,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import 'youtube-background';
 delete L.Icon.Default.prototype._getIconUrl;
 
+import logo from '../assets/logo.svg';
+import logo_fa from '../assets/logo-fa.svg';
+
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: marker2x,
   iconUrl: marker,
@@ -86,7 +89,7 @@ $(document).ready(function () {
       },
       fa: {
         translation: {
-          "logo": "public/logo-fa.svg",
+          "logo": logo_fa,
           "pageTitle": "امیرحسن &#x1F492 املین",
           "hitched": "عروسی می‌کنیم!",
           "dates": "۲۸ تیر ۱۴۰۱ در فرانسه جشنی می‌گیریم، و از دیدنتان خوشحال می‌شویم",
@@ -111,7 +114,7 @@ $(document).ready(function () {
     }
   }).then(function (t) {
     document.getElementById('pageTitle').innerHTML = t('pageTitle');
-    document.getElementById('logo').src = t('logo', 'public/logo.svg');
+    document.getElementById('logo').src = t('logo', logo);
     document.getElementById('hitched').innerHTML = t('hitched');
     document.getElementById('dates').innerHTML = t('dates');
     document.getElementById('getThere').innerHTML = t('getThere');
