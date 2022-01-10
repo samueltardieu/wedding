@@ -62,7 +62,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.0",
+    "@popperjs/core": "^2.11.2",
     "bootstrap": "^5.1.0",
     "core-js": "^3.20.2",
     "d3": "^7.2.1",
