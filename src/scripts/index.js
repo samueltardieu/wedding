@@ -84,7 +84,7 @@ $(document).ready(function () {
           "inviteCode": "Code d'invitation",
           "itsMe": "Oui, c'est moi!",
           "saving": "<strong>Une petite second!</strong> On note.",
-          "wrongCode": "<strong>Désolé!</strong> Le code est incorrecte."
+          "wrongCode": "<strong>Désolé !</strong> Le code est incorrect."
         }
       },
       fa: {
